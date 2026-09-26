@@ -1,2 +1,2 @@
-# DilucBot
-광기의 다이루크봇
+# MeguminBot
+광기의 메구밍봇
