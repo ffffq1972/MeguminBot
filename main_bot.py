@@ -7,7 +7,7 @@
 # Linux
 # sudo apt install -y ffmpeg
 
-import discord, os, sys, yt_dlp, asyncio
+import discord, os, sys, yt_dlp, asyncio, random
 from discord import app_commands
 from discord.ext import commands
 from datetime import datetime, time
@@ -190,6 +190,17 @@ async def pause(ctx):
         ctx.voice_client.pause()
         await ctx.reply("ザ・ワールド！時よ止まれ！")
 
+Megumin_Desa = ["黒より黒く 闇より暗き漆黒に 我が深紅の混淆を望みたもう\n覚醒のとき来たれり、無謬の境界に落ちし理\n無行の歪みとなりて、現出せよ！",
+                "天変地異の奔流よ、我が呼びかけに応じ、今ひとたびその咆哮を轟かせよ！\n",
+                "紅き魔力は、万象の崩壊を導く光\n終焉の調べを奏でよ、森羅万象を覆す力をもって！",
+                "紅蓮の炎に抱かれし、万物を灰燼と化す絶対の力\n万象を灰燼に帰す、究極の破壊を今ここに！",
+                "深淵なる闇の底より、焦土を焦がす劫火を召喚せん\nすべてを無に帰す、灼熱の閃光となりて！",
+                "暗黒の彼方より、虚無の彼方より、深淵の呼び声に応えよ...\n赤き波動は、森羅万象を滅ぼす業火なり\n我が求めに応じ、万物を呑み込む焔となれ！",
+                "我が名に賭けて、我が深紅の炎に命ずる\n無窮の深淵より現れし、破滅の化身よ\n今ここに、我が力の証を示せ！",
+                "光に覆われし漆黒よ、夜を纏いし爆炎よ\n紅魔の名のもとに、原初の崩壊を顕現せよ！\n終焉の王たる我が力、見よ！",
+                "我は求む、我が身を焦がすほどの熱き力を\n紅魔随一の天才魔法使い、めぐみんの名のもとに！\n理を砕き、世界を赤く染め上げよ！",
+                "偽りの平穏を打ち砕く、真紅の雷撃よ\n我が咆哮に応え、滅びの雨を降らせたまえ！"]
+
 # 다시재생
 @BOT.command(name="노동요다시재생", description="정지시킨 폭☆렬☆송을 다시 재생시킨닷!")
 async def resume(ctx):
@@ -198,7 +209,7 @@ async def resume(ctx):
         return
     if ctx.voice_client and ctx.voice_client.is_paused():
         ctx.voice_client.resume()
-        await ctx.reply("黒より黒く 闇より暗き漆黒に 我が深紅の混淆を望みたもう...\n# エクスプロージョン！")
+        await ctx.reply(f"{random.choice(Megumin_Desa)}\n# エクスプロージョン！")
 
 # 퇴장
 @BOT.command(name="노동요퇴장", description="광메봇을 퇴장시킨닷!")
