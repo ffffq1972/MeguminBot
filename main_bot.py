@@ -209,8 +209,8 @@ async def resume(ctx):
         return
     if ctx.voice_client and ctx.voice_client.is_paused():
         ctx.voice_client.resume()
-        n = random.randint(0, len(Megumin_Desa) - 1)
-        await ctx.reply(f"{Megumin_Desa[n]}\n{n}\n# エクスプロージョン！")
+        n = random.randint(0, len(Megumin_Desa) - 1) # 왠지는 모르겠는데 random.choice()쓰면 중복이 계속 나와서 이렇게 씀
+        await ctx.reply(f"{Megumin_Desa[n]}\n# エクスプロージョン！")
 
 # 퇴장
 @BOT.command(name="노동요퇴장", description="광메봇을 퇴장시킨닷!")
