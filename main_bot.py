@@ -209,7 +209,8 @@ async def resume(ctx):
         return
     if ctx.voice_client and ctx.voice_client.is_paused():
         ctx.voice_client.resume()
-        await ctx.reply(f"{random.choice(Megumin_Desa)}\n# エクスプロージョン！")
+        n = random.randint(0, len(Megumin_Desa) - 1)
+        await ctx.reply(f"{random.choice(Megumin_Desa)}\n{n}\n# エクスプロージョン！")
 
 # 퇴장
 @BOT.command(name="노동요퇴장", description="광메봇을 퇴장시킨닷!")
